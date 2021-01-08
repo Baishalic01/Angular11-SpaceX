@@ -1,7 +1,7 @@
 @import '../../assets/global/scss/colors';
 .cmp-filters {
     display:inline-block;
-    width: 12%;
+    width: 16%;
     background: $white;
     padding-right: 10px;
     margin-left: 10px;
@@ -12,6 +12,9 @@
         padding: 14px;
         margin-right:unset;
         margin-left: unset;
+    }
+    @media only screen and (max-width: 1024px) and (min-width: 701px){
+        width: 21%;
     }
     hr {
             width: 80%;

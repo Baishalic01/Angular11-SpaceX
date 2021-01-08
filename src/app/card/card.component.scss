@@ -4,9 +4,12 @@
     background: $white;
     margin-right: 20px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 14px;
     @media only screen and (max-width: 700px) {
         margin-right: unset;
+    }
+    @media only screen and (max-width: 1024px) and (min-width: 701px){
+        padding: 14px;
     }
     &-image {
         background: $light-grey;
