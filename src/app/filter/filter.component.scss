@@ -1,0 +1,112 @@
+@import '../../assets/global/scss/colors';
+.cmp-filters {
+    display:inline-block;
+    width: 12%;
+    background: $white;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    @media only screen and (max-width: 700px) {
+        width: -webkit-fill-available;
+        padding: 14px;
+        margin-right:unset;
+        margin-left: unset;
+    }
+    hr {
+            width: 80%;
+            margin-left: 21px;
+            margin-bottom: 10px;
+            &:nth-of-type(1) {
+                margin-left: 18px;
+                @media only screen and (max-width: 700px) {
+                    margin-left: 6.5%;
+                }
+            }
+            @media only screen and (max-width: 700px) {
+                width: 86%;
+                margin-left: 7.5%;
+                margin-bottom: 4%;
+            }
+        }
+    &-heading {
+            font: {
+                    weight: bold;
+                    size: 16px;
+                    family: 'Helvetica, sans-serif';
+            }
+            margin-bottom: 5px;
+            margin-left: 5px;
+            padding-top: 5px;
+        }
+
+    &-subHeading {
+        font: {
+                size: 14px;
+                family: 'Helvetica, sans-serif';
+        }
+        text-align: center;
+        margin-left: 10px;
+    }
+    &-subfilter {
+        display: inline-block;
+        width: 50%;
+        margin-bottom:20px;
+        @media only screen and (max-width: 700px) {
+            margin-bottom: 5%;
+        }
+
+        &:nth-child(odd) {
+            text-align-last: right;
+            @media only screen and (max-width: 700px) {
+                width:48%;
+            }
+        }
+        &:nth-child(even) {
+            width: 43%;
+            margin-left: 10px;
+            @media only screen and (max-width: 700px) {
+                width:48%;
+                margin-left: 2%;
+            }
+        }
+        &:nth-last-child(1) {
+            text-align-last: right;
+        }
+        &:nth-last-child(3) {
+            text-align-last: right;
+        }
+
+        span {
+                background: $light-green;
+                padding: 3% 23%;
+                border-radius: 3px;
+                @media only screen and (max-width: 700px) {
+                    padding: 3% 30%;
+                    border-radius: 3px;
+                }
+            &.active {
+                font-weight: bold;
+                background: $dark-green;
+            }
+            &:hover {
+                cursor: pointer;
+                font-weight: bold;
+                background: $dark-green;
+            }
+        }
+    }
+    &-success-val {
+        &:nth-child(odd) {
+            text-align-last: left;
+            span {
+                margin-left: 10px;
+            }
+        }
+        &:nth-child(even) {
+            text-align-last: right;
+
+        } 
+    }
+
+}

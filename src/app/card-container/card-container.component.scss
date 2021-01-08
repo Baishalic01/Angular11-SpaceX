@@ -1,0 +1,18 @@
+.cmp-card-container {
+    display: inline-block;
+    width: 84%;
+    float:right;
+    margin-top: 10px;
+    @media only screen and (max-width: 700px) {
+        display: inline-grid;
+        width: 100%;
+        float:unset;
+    }
+    div {
+        display: inline-block;
+    }
+    &-pagination {
+        display: inline-block;
+        float: right;
+    }
+}

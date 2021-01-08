@@ -1,0 +1,20 @@
+<div class="cmp-filters">
+    <div class="cmp-filters-heading"> Filters</div>
+    <div class="cmp-filters-subHeading">Launch year</div>
+    <hr>
+    <div class="cmp-filters-subfilter" *ngFor="let year of filterByYear; index as i">
+        <span class="cmp-filters-subfilter_details" (click)="filterDataByLaunchYear(year, i)" [ngClass]="{'active': selectedIndex == i}">{{year}}</span>
+    </div>
+
+    <div class="cmp-filters-subHeading">Successful Launch</div>
+    <hr>
+    <div class="cmp-filters-subfilter cmp-filters-success-val" *ngFor="let bool of booleanArray; index as i">
+        <span class="cmp-filters-subfilter_details" (click)="filterDataByLaunch(bool, i)" [ngClass]="{'active': launchIndex == i}">{{bool}}</span>
+    </div>
+
+    <div class="cmp-filters-subHeading">Successful Landing</div>
+    <hr>
+    <div class="cmp-filters-subfilter cmp-filters-success-val" *ngFor="let bool of booleanArray; index as i">
+        <span class="cmp-filters-subfilter_details" (click)="filterDataByLanding(bool, i)" [ngClass]="{'active': landingIndex == i}">{{bool}}</span>
+    </div>
+</div>

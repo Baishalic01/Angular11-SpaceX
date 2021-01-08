@@ -1,0 +1,19 @@
+<div class="cmp-card-container">
+    <div *ngFor="let programs of programDetails| paginate: { itemsPerPage: 8, currentPage: p }; index as i">
+        <app-card 
+                    [dataSource]="programs" 
+                    [imageSource]="programs.links.mission_patch_small"
+                    [missionName]="programs.mission_name"
+                    [flightNumber]="programs.flight_number"
+                    [missionIDs]="programs.mission_id"
+                    [launchYear]="programs.launch_year"
+                    [successfulLaunch]="programs.launch_success"
+                    [successfulLanding]="programs.launch_landing">
+        </app-card>
+    </div>
+</div>
+
+<ngx-spinner></ngx-spinner>
+<div class="cmp-card-container-pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

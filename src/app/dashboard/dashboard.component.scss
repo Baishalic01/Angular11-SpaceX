@@ -1,0 +1,13 @@
+@import '../../assets/global/scss/colors';
+
+.cmp-dashboard {
+    background: $light-grey;
+    &-heading {
+                display: block;
+                font: {
+                        size: 26px;
+                        weight: bold;
+                }
+                line-height: 42px;
+    }
+}

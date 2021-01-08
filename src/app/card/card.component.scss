@@ -1,0 +1,49 @@
+@import '../../assets/global/scss/colors';
+
+.cmp-card {
+    background: $white;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    @media only screen and (max-width: 700px) {
+        margin-right: unset;
+    }
+    &-image {
+        background: $light-grey;
+        max-width: 200px;
+        max-height: 200px;
+        text-align-last: center;
+        @media only screen and (max-width: 700px) {
+            max-width: unset;
+            max-height: unset;
+        }
+        img {
+            min-width: 200px;
+            min-height: 200px;
+            @media only screen and (max-width: 700px) {
+                min-width: 250px;
+            min-height: 250px;
+            }
+        }
+    }
+    &-info {
+        line-height: 22px;
+        color: $light-grey-text;
+        span {
+                font-weight: bold;
+                color: $black;
+        }
+
+        &-heading {
+            color: $dark-blue;
+            max-width: 200px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        &-otherDetails {
+            max-width: 200px;
+
+        }
+    }
+}
