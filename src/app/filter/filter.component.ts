@@ -28,39 +28,42 @@ export class FilterComponent implements OnInit {
   }
 
   filterDataByLaunchYear(year: string, index: number) {
-    this.toggleLaunchYear = !this.toggleLaunchYear;
-    this.selectedIndex = index;
-    if (this.toggleLaunchYear === true) {
+    if (this.selectedIndex !== index) {
       this.yearSelected = '&launch_year=' + year;
+      this.toggleLaunchYear = true;
+      this.selectedIndex = index;
     } else {
-      this.yearSelected = '';
+      this.yearSelected = ''
       this.selectedIndex = -1;
+      this.toggleLaunchYear = false;
     }
     this.sharedService.sendProgramDetailYear(this.yearSelected);  
   }
 
   filterDataByLaunch(val:string, index: number) {
-    this.toggleLaunch = !this.toggleLaunch;
-    this.launchIndex = index;
-    if (this.toggleLaunch === true) {
+    if (this.launchIndex !== index) {
       this.launchSuccess = '&launch_success=' + val.toLowerCase();
+      this.toggleLaunch = true;
+      this.launchIndex = index;
     } else {
-      this.launchSuccess = '';
+      this.launchSuccess = ''
       this.launchIndex = -1;
+      this.toggleLaunch = false;
     }
     this.sharedService.sendProgramDetailLaunch(this.launchSuccess);  
 
   }
 
   filterDataByLanding(val:string, index: number) {
-    this.toggleLanding = !this.toggleLanding;
-    this.landingIndex = index;
-    if (this.toggleLanding === true) {
+    if (this.landingIndex !== index) {
       this.landingSuccess = '&land_success=' + val.toLowerCase();
+      this.toggleLanding = true;
+      this.landingIndex = index;
     } else {
       this.landingSuccess = ''
       this.landingIndex = -1;
+      this.toggleLanding = false;
     }
-    this.sharedService.sendProgramDetailLanding(this.landingSuccess);  
+    this.sharedService.sendProgramDetailLanding(this.landingSuccess);
   }
 }
