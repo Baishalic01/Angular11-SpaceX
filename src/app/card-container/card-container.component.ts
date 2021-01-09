@@ -26,23 +26,14 @@ export class CardContainerComponent implements OnInit {
       this.programDetails = response;
       this.subscriptionYear = this.sharedService.getProgramDetailYear().subscribe((detail: { text: any; }) => {   
         this.yearSelected = detail.text;  
-        console.log('year:  ' + this.yearSelected);
-        console.log('launch:  ' + this.launchVal);
-        console.log('landing:  ' + this.landingVal);
         this.filteredData(this.yearSelected,this.launchVal,this.landingVal);
       });
       this.subscriptionLaunch = this.sharedService.getProgramDetailLaunch().subscribe((detail: { text: any; }) => {   
         this.launchVal = detail.text;  
-        console.log('year:  ' + this.yearSelected);
-        console.log('launch:  ' + this.launchVal);
-        console.log('landing:  ' + this.landingVal);
         this.filteredData(this.yearSelected,this.launchVal,this.landingVal);
       });
       this.subscriptionLanding = this.sharedService.getProgramDetailLanding().subscribe((detail: { text: any; }) => {   
         this.landingVal = detail.text;
-        console.log('year:  ' + this.yearSelected);
-        console.log('launch:  ' + this.launchVal);
-        console.log('landing:  ' + this.landingVal);
         this.filteredData(this.yearSelected,this.launchVal,this.landingVal);
       });
     });
