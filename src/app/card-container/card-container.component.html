@@ -15,5 +15,6 @@
 
 <ngx-spinner></ngx-spinner>
 <div class="cmp-card-container-pagination">
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls previousLabel="Prev"
+    nextLabel="Next" (pageChange)="p = $event"></pagination-controls>
 </div>

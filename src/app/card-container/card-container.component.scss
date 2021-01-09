@@ -17,5 +17,13 @@
     &-pagination {
         display: inline-block;
         float: right;
+        margin-right: 1%;
+        @media only screen and (max-width: 700px) {
+            font-size: 12px;
+            min-inline-size: max-content;
+        }
+        @media only screen and (max-width: 1024px) and (min-width: 701px){
+            margin-right: 8%;
+        }
     }
 }
