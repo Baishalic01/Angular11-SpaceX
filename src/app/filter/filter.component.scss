@@ -88,20 +88,23 @@
                     padding: 3% 30%;
                     border-radius: 3px;
                 }
-            &.active {
-                font-weight: bold;
-                background: $dark-green;
-            }
             &:hover {
                 cursor: pointer;
                 font-weight: bold;
                 background: $dark-green;
                 @media only screen and (max-width: 700px) {
-                    background: $light-green; 
+                    background: $light-green;
+                    font-weight: normal;
                 }
                 @media only screen and (max-width: 1024px) and (min-width: 701px){
-                    background: $light-green; 
+                    background: $light-green;
+                    font-weight: normal;
+
                 }
+            }
+            &.active {
+                font-weight: bold;
+                background: $dark-green;
             }
         }
     }
