@@ -5,6 +5,8 @@
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 14px;
+    height: 360px;
+    display: grid;
     @media only screen and (max-width: 700px) {
         margin-right: unset;
     }

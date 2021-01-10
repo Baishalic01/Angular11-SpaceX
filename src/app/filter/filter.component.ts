@@ -27,6 +27,7 @@ export class FilterComponent implements OnInit {
     }
   }
 
+  /*Method to filter by year selected*/
   filterDataByLaunchYear(year: string, index: number) {
     if (this.selectedIndex !== index) {
       this.yearSelected = '&launch_year=' + year;
@@ -39,6 +40,8 @@ export class FilterComponent implements OnInit {
     }
     this.sharedService.sendProgramDetailYear(this.yearSelected);  
   }
+
+  /*Method to filter by launch success True/False selected*/
 
   filterDataByLaunch(val:string, index: number) {
     if (this.launchIndex !== index) {
@@ -54,6 +57,7 @@ export class FilterComponent implements OnInit {
 
   }
 
+  /*Method to filter by Landing success True/False selected*/
   filterDataByLanding(val:string, index: number) {
     if (this.landingIndex !== index) {
       this.landingSuccess = '&land_success=' + val.toLowerCase();

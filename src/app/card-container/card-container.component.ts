@@ -41,6 +41,7 @@ export class CardContainerComponent implements OnInit {
 
   filteredData(year: String, launch: String, landing: String ) {
     this.spinner.show();
+    this.p = 1;
     this.programDetailsService.fetchProgramDetails(year, launch, landing).subscribe((response) => {
       this.programDetails = response;
       this.spinner.hide();
