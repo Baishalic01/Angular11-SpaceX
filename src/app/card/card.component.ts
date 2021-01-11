@@ -7,22 +7,22 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input()
-  dataSource!: String;
+  dataSource!: string;
 
   @Input()
-  imageSource!: String;
+  imageSource!: string;
   @Input() 
-  missionName!: String;
+  missionName!: string;
   @Input()
-  flightNumber!: String;
+  flightNumber!: string;
   @Input()
-  missionIDs!: String;
+  missionIDs!: string;
   @Input()
-  launchYear!: String;
+  launchYear!: string;
   @Input()
-  successfulLaunch!: String;
+  successfulLaunch!: string;
   @Input()
-  successfulLanding!: String;
+  successfulLanding!: string;
 
   constructor() { }
 
