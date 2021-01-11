@@ -18,6 +18,7 @@ export class CardContainerComponent implements OnInit {
   launchVal: String = '';
   landingVal: String = '';
   p: number = 1;
+  subscriptions: Subscription[] = [];
 
   constructor(private programDetailsService: ProgramDetailsService, private sharedService: SharedService, private spinner: NgxSpinnerService) { }
 
@@ -45,7 +46,10 @@ export class CardContainerComponent implements OnInit {
     this.programDetailsService.fetchProgramDetails(year, launch, landing).subscribe((response) => {
       this.programDetails = response;
       this.spinner.hide();
-    })
+    });
   }
 
+  ngOnDestroy() {
+    this.subscriptions.forEach((subscription) => subscription.unsubscribe())
+}
 }
