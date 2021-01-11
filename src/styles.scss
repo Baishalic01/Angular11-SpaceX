@@ -3,8 +3,9 @@
 
 body {
     margin: 0;
-    display: inline-block;
+    display: inline-grid;
     padding: 10px;
     background: $light-grey;
     width: -webkit-fill-available;
+    width: -moz-available;
 }

@@ -9,6 +9,7 @@
     margin-right: 20px;
     @media only screen and (max-width: 700px) {
         width: -webkit-fill-available;
+        width: -moz-available;
         padding: 14px;
         margin-right:unset;
         margin-left: unset;
