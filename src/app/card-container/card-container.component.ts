@@ -14,9 +14,9 @@ export class CardContainerComponent implements OnInit {
   subscriptionYear: Subscription = new Subscription;
   subscriptionLaunch: Subscription = new Subscription;
   subscriptionLanding: Subscription = new Subscription;
-  yearSelected: String = '';
-  launchVal: String = '';
-  landingVal: String = '';
+  yearSelected: string = '';
+  launchVal: string = '';
+  landingVal: string = '';
   p: number = 1;
   subscriptions: Subscription[] = [];
 
@@ -40,7 +40,7 @@ export class CardContainerComponent implements OnInit {
     });
   }
 
-  filteredData(year: String, launch: String, landing: String ) {
+  filteredData(year: string, launch: string, landing: string ) {
     this.spinner.show();
     this.p = 1;
     this.programDetailsService.fetchProgramDetails(year, launch, landing).subscribe((response) => {
